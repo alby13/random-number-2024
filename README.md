@@ -1,5 +1,6 @@
 # Random Number Generator 2024
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+
 This project aims to generate random numbers using various methods to achieve the best possible randomness with existing computer hardware.
 
 ## Why True Random Generation is Hard
