@@ -29,7 +29,9 @@ GUI
 The program includes a graphical user interface (GUI) for easy interaction.
 
 # Download the programming
-Clone the repository:
+
+### Clone the repository:
+
 <code>bash
 Copy code
 git clone https://github.com/alby13/random_number_2024.git
