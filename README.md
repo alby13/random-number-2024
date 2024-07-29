@@ -19,7 +19,7 @@ Converts these bytes into an integer to produce a random number within a specifi
 Uses Intel's hardware-based random number generator (RDRAND) to produce random numbers.
 This method is supported only on Windows systems and requires specific Intel hardware.
 
-**OS urandom Hardware Random:**
+**OS urandom Hardware Method:**
 
 This method uses the operating system's urandom function to generate a random number. The urandom function uses a combination of hardware and software-based random number generators to generate random numbers. os.urandom generates random bytes and converts these bytes into a random number.
 
