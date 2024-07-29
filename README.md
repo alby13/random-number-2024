@@ -28,19 +28,20 @@ Usage
 GUI
 The program includes a graphical user interface (GUI) for easy interaction.
 
-#Download the programming
+# Download the programming
 Clone the repository:
-
-bash
+<code>bash
 Copy code
-git clone https://github.com/yourusername/random_number_2024.git
-cd random_number_2024
-Install the required dependencies:
+git clone https://github.com/alby13/random_number_2024.git
+cd random_number_2024</code>
 
-bash
+### Install the required dependencies:
+
+<code>bash
 Copy code
-pip install -r requirements.txt
-Contributing
+pip install -r requirements.txt</code>
+
+### Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
 
 License
