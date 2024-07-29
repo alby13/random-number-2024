@@ -13,15 +13,13 @@ This program uses the following methods to generate random numbers:
 
 Utilizes the os.urandom function to gather random bytes from the operating system's entropy pool.
 Converts these bytes into an integer to produce a random number within a specified range.
-Intel Hardware RNG:
 
 **Intel Processor Method:**
 
 Uses Intel's hardware-based random number generator (RDRAND) to produce random numbers.
 This method is supported only on Windows systems and requires specific Intel hardware.
-OS urandom Hardware Random:
 
-**Intel Processor Method:**
+**OS urandom Hardware Random:**
 
 This method uses the operating system's urandom function to generate a random number. The urandom function uses a combination of hardware and software-based random number generators to generate random numbers. os.urandom generates random bytes and converts these bytes into a random number.
 
