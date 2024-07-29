@@ -25,7 +25,7 @@ OS urandom Hardware Random:
 
 This method uses the operating system's urandom function to generate a random number. The urandom function uses a combination of hardware and software-based random number generators to generate random numbers. os.urandom generates random bytes and converts these bytes into a random number.
 
-AMD Hardware :
+**AMD Processor Method:**
 
 This method uses AMD's Hardware Random Number Generator (HRNG) to generate a random number. The HRNG is a hardware-based random number generator that uses thermal noise to generate random numbers. This method is considered to be highly random and secure, but it is only available on AMD processors.
 
