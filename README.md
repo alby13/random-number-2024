@@ -9,27 +9,28 @@ True random number generation is challenging because computers are deterministic
 ## Methods of Random Number Generation
 This program uses the following methods to generate random numbers:
 
-Entropy Pool Random:
+**Entropy Pool Random:**
 
 Utilizes the os.urandom function to gather random bytes from the operating system's entropy pool.
 Converts these bytes into an integer to produce a random number within a specified range.
 Intel Hardware RNG:
 
+**Intel Processor Method:**
+
 Uses Intel's hardware-based random number generator (RDRAND) to produce random numbers.
 This method is supported only on Windows systems and requires specific Intel hardware.
 OS urandom Hardware Random:
 
+**Intel Processor Method:**
+
 Similar to the Entropy Pool method, this uses os.urandom to generate random bytes.
 Converts these bytes into a random number within a given range.
-AMD Hardware RNG (placeholder):
 
-Intended to use AMD's hardware-based random number generator.
-This method is currently a placeholder and will be implemented in future updates.
-Usage
-GUI
-The program includes a graphical user interface (GUI) for easy interaction.
+AMD Hardware :
 
-# Download the programming
+This method uses AMD's Hardware Random Number Generator (HRNG) to generate a random number. The HRNG is a hardware-based random number generator that uses thermal noise to generate random numbers. This method is considered to be highly random and secure, but it is only available on AMD processors.
+
+# Download the program
 
 ### Clone the repository:
 
@@ -43,6 +44,8 @@ cd random_number_2024</code>
 <code>bash
 Copy code
 pip install -r requirements.txt</code>
+
+### It's easy to use because a graphical menu is provided.
 
 ### Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
