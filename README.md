@@ -1,4 +1,5 @@
 # Random Number Generator 2024
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 This project aims to generate random numbers using various methods to achieve the best possible randomness with existing computer hardware.
 
 ## Why True Random Generation is Hard
@@ -27,30 +28,7 @@ Usage
 GUI
 The program includes a graphical user interface (GUI) for easy interaction.
 
-Code Example
-Here is an example of how to use the RandomNumberGenerator class to generate random numbers:
-
-<code>
-from random_number_2024 import RandomNumberGenerator
-
-rng = RandomNumberGenerator()
-
-# Generate a random number using the entropy pool method
-random_number = rng.generate_entropy_pool_random(1, 100)
-print(f"Random number (Entropy Pool): {random_number}")
-
-# Generate a random number using Intel Hardware RNG
-try:
-    random_number = rng.generate_intel_hardware_random(1, 100)
-    print(f"Random number (Intel Hardware RNG): {random_number}")
-except OSError as e:
-    print(f"Intel Hardware RNG error: {e}")
-
-# Generate a random number using os.urandom
-random_number = rng.generate_os_urandom_hardware_random(1, 100)
-print(f"Random number (os.urandom): {random_number}")
-
-#Installation
+#Download the programming
 Clone the repository:
 
 bash
