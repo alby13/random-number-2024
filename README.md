@@ -21,7 +21,7 @@ This method is supported only on Windows systems and requires specific Intel har
 
 **Windows CryptGenRandom win32crypt Method:**
 
-This method uses the Winndows operating system's CryptGenRandom from win32crypt to generate a random number. It fills a buffer with cryptographically random bytes. An integer (number) is then generated from the bytes.
+This method uses the Windows operating system's CryptGenRandom from win32crypt to generate a random number. It fills a buffer with cryptographically random bytes. An integer (number) is then generated from the bytes.
 
 **AMD Processor Method:**
 
