@@ -1,3 +1,5 @@
+<img src="https://github.com/alby13/random-number-2024/blob/main/program-screenshot.png">
+
 # Random Number Generator 2024
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 
