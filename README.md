@@ -35,7 +35,7 @@ This method uses AMD's Hardware Random Number Generator (HRNG) to generate a ran
 
 <code>bash
 Copy code
-git clone https://github.com/alby13/random_number_2024.git
+git clone [https://github.com/alby13/random_number_2024.git](https://github.com/alby13/random-number-2024.git)
 cd random_number_2024</code>
 
 ### Install the required dependencies:
