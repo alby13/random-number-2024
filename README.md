@@ -38,12 +38,6 @@ Copy code
 git clone [https://github.com/alby13/random_number_2024.git](https://github.com/alby13/random-number-2024.git)
 cd random_number_2024</code>
 
-### Install the required dependencies:
-
-<code>bash
-Copy code
-pip install -r requirements.txt</code>
-
 ### It's easy to use because a graphical menu is provided.
 
 ### Contributing
