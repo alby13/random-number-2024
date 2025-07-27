@@ -3,7 +3,7 @@
 
 > Hardware‑grade randomness with automatic fall‑back – wrapped in a friendly GUI.
 
-![Screenshot of the GUI](2025.png)
+![Screenshot of the GUI](program-screenshot-2025.png)
 
 ---
 
