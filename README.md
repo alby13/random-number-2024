@@ -81,14 +81,3 @@ Bug reports, feature requests, or pull‑requests are warmly welcomed!
 ## 📄  License
 
 This project is released under the MIT License – see [`LICENSE`](LICENSE) for details.
-
-```
-**What changed?**
-
-* Added a clean screenshot link (no raw HTML).
-* New **Features** table explaining auto‑detection.
-* Installation & run instructions spelled out.
-* Headless/CI note and `--nogui` flag mention.
-* Fixed repository URL in the clone snippet.
-* Tidier markdown (consistent lists, code fences, emoji for quick scanning).
-```
