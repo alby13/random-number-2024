@@ -1,47 +1,94 @@
-<img src="https://github.com/alby13/random-number-2024/blob/main/program-screenshot.png">
+# Random Number Generator 2024 (Updated July 2025) &nbsp;🎲
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 
-# Random Number Generator 2024
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+> Hardware‑grade randomness with automatic fall‑back – wrapped in a friendly GUI.
 
-This project aims to generate random numbers using various methods to achieve the best possible randomness with existing computer hardware.
+![Screenshot of the GUI](2025.png)
 
-## Why True Random Generation is Hard
-True random number generation is challenging because computers are deterministic machines, meaning they follow specific instructions to produce predictable results. True randomness, on the other hand, is unpredictable and lacks any discernible pattern. While hardware-based solutions can produce random numbers by leveraging physical processes, achieving true randomness in software alone is difficult.
+---
 
-## Methods of Random Number Generation
-This program uses the following methods to generate random numbers:
+## ✨  Features
+| Back‑end | Source of entropy | Supported OS | Auto‑detects? | Notes |
+|----------|------------------|--------------|---------------|-------|
+| **Entropy Pool** | `os.urandom` / `getrandom` | All | ✅ | Always available |
+| **Windows CryptoAPI** | `advapi32!CryptGenRandom` | Windows 10+ | ✅ | FIPS‑compliant |
+| **Intel / AMD RDRAND** | CPU hardware RNG | Windows (64‑bit) with RDRAND‑capable CPU | ✅ | Greyed‑out if unsupported |
 
-**Entropy Pool Random:**
+*At start‑up the app probes the host PC and disables buttons for any methods that are unavailable, so nothing ever crashes.*
 
-Utilizes the os.urandom function to gather random bytes from the operating system's entropy pool.
-Converts these bytes into an integer to produce a random number within a specified range.
+---
 
-**Intel Processor Method:**
+## 🚀  Quick Start
 
-Uses Intel's hardware-based random number generator (RDRAND) to produce random numbers.
-This method is supported only on Windows systems and requires specific Intel hardware.
+```bash
+# 1 Get the code
+git clone https://github.com/alby13/random-number-2024.git
+cd random-number-2024
 
-**Windows CryptGenRandom win32crypt Method:**
+# 2 Create a venv (recommended) and install Tk if it's missing
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install pillow  # <-- only if your Python build lacks Tk images
 
-This method uses the Windows operating system's CryptGenRandom from win32crypt to generate a random number. It fills a buffer with cryptographically random bytes. An integer (number) is then generated from the bytes.
+# 3 Run the GUI
+python rng_gui.py
+````
 
-**AMD Processor Method:**
+No command‑line flags are required – the window opens immediately.
 
-This method uses AMD's Hardware Random Number Generator (HRNG) to generate a random number. The HRNG is a hardware-based random number generator that uses thermal noise to generate random numbers. This method is considered to be highly random and secure, but it is only available on AMD processors.
+---
 
-# Download the program
+## 🧐  Why True Randomness Is Hard
 
-### Clone the repository:
+Computers are deterministic: given the same input they always produce the same output.
+“True” randomness, by contrast, is unpredictable and pattern‑less. Software **alone** can’t create that unpredictability, so this project leans on:
 
-<code>bash
-Copy code
-git clone [https://github.com/alby13/random_number_2024.git](https://github.com/alby13/random-number-2024.git)
-cd random_number_2024</code>
+1. **Operating‑system entropy pools**
+   Keyboard timing, disk‑seek jitter, network interrupts… all mixed by the kernel.
 
-### It's easy to use because a graphical menu is provided.
+2. **Hardware RNG instructions** (`RDRAND`)
+   Thermal noise on modern x86 chips converted directly into random bits.
 
-### Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+3. **CryptGenRandom**
+   Microsoft’s long‑standing, FIPS‑validated CSPRNG.
 
-# License
-This project is licensed under the MIT License.
+Each generator is isolated; if one fails (or simply doesn’t exist on a user’s machine) the rest of the program keeps running.
+
+---
+
+## 🛠️  Developer Notes
+
+* **Python ≥ 3.10** required.
+  The code is tested on 3.10 – 3.12.
+* The GUI is pure Tkinter; no extra GUI libraries to install.
+* Headless mode (e.g. CI servers) works too – `python rng_gui.py --nogui` runs a quick self‑test and exits.
+
+---
+
+## 🤝  Contributing
+
+Bug reports, feature requests, or pull‑requests are warmly welcomed!
+
+1. Fork the repo
+2. Create a branch (`git checkout -b my-feature`)
+3. Commit your changes (`git commit -am "Add amazing feature"`)
+4. Push to the branch (`git push origin my-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄  License
+
+This project is released under the MIT License – see [`LICENSE`](LICENSE) for details.
+
+```
+**What changed?**
+
+* Added a clean screenshot link (no raw HTML).
+* New **Features** table explaining auto‑detection.
+* Installation & run instructions spelled out.
+* Headless/CI note and `--nogui` flag mention.
+* Fixed repository URL in the clone snippet.
+* Tidier markdown (consistent lists, code fences, emoji for quick scanning).
+```
